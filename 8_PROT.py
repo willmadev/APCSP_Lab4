@@ -1,4 +1,4 @@
-## Problem 7 - PROT (Translating RNA into Protein)
+## Problem 8 - PROT (Translating RNA into Protein)
 ## Willma
 ## 12/16/2020
 
