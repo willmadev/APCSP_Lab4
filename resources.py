@@ -36,6 +36,11 @@ def read_fasta(file_path):
     
     return(dictionary)
 
+def write_file(file_path, strList):
+    with open(file_path, 'w') as f:
+        for string in strList:
+            f.write(string + '\n')
+
 codonDict = {
     'AUU': 'I', 'AUC': 'I', 'AUA': 'I', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L', 'UUA': 'L', 'UUG': 'L',
     'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V', 'UUU': 'F', 'UUC': 'F', 'AUG': 'M', 'UGU': 'C', 'UGC': 'C',
@@ -56,3 +61,9 @@ aaDict = {
     'V': ['GUU', 'GUC', 'GUA', 'GUG'], 'W': ['UGG'], 'Y': ['UAU', 'UAC']
 }
 
+def list_to_str(og_list):
+    return_str = ''
+    for item in og_list:
+        return_str += str(item) + ' '
+    
+    return(return_str)

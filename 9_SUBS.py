@@ -2,7 +2,7 @@
 ## Willma
 ## 12/16/2020
 
-## http://rosalind.info/problems/prot/
+## http://rosalind.info/problems/subs/
 
 import resources
 
@@ -17,8 +17,6 @@ while True:
         break
     locs.append(loc + 1)
 
-locs_str = ''
-for item in locs:
-    locs_str += str(item) + ' '
+locs_str = resources.list_to_str(locs)
 
-print (locs_str)
+print(locs_str)
