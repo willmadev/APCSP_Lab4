@@ -1,4 +1,4 @@
-## Problem 4 - IPRB
+## Problem 4 - IPRB (Mendel's First Law)
 ## Willma
 ## 12/14/2020
 

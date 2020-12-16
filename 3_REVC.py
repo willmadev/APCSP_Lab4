@@ -1,4 +1,4 @@
-## Problem 3 - REVC
+## Problem 3 - REVC (Complementing a Strand of DNA)
 ## Willma
 ## 12/14/2020
 

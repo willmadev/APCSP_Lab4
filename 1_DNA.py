@@ -1,4 +1,5 @@
-## Problem 1 -file_pathWillma
+## Problem 1 - DNA (Counting DNA Nucleotides)
+## Willma
 ## 12/14/2020
 
 ## http://rosalind.info/problems/dna/

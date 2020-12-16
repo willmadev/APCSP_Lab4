@@ -1,4 +1,5 @@
-## Problem 2 -file_pathWillma
+## Problem 2 - RNA (Transcribing DNA into RNA)
+## Willma
 ## 12/14/2020
 
 ## http://rosalind.info/problems/rna/
