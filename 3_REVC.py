@@ -4,12 +4,12 @@
 
 ## http://rosalind.info/problems/revc/
 
-import stuff
+import resources
 
 # Enter DNA Sequence here
 file_name = 'datasets/rosalind_revc.txt'
 
-dna_seq = stuff.read_file(file_name).strip('\n')
+dna_seq = resources.read_file(file_name).strip('\n')
 
 reverse = dna_seq[::-1]
 

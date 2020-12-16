@@ -4,12 +4,12 @@
 
 ## http://rosalind.info/problems/dna/
 
-import stuff
+import resources
 
 # Enter DNA Sequence here
 file_path = 'datasets/rosalind_dna.txt'
 
-dna_seq = stuff.read_file(file_path)
+dna_seq = resources.read_file(file_path)
 
 A, G, C, T = 0, 0, 0, 0
 

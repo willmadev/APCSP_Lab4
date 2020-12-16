@@ -4,11 +4,11 @@
 
 ## http://rosalind.info/problems/iprb/
 
-import stuff
+import resources
 
 #dom, het, rec
 file_path = 'datasets/rosalind_iprb.txt'
-k, m, n = stuff.read_file(file_path).split(' ')
+k, m, n = resources.read_file(file_path).split(' ')
 k, m, n = int(k), int(m), int(n)
 total = k + m + n
 

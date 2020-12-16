@@ -4,10 +4,10 @@
 
 ## http://rosalind.info/problems/iprb/
 
-import stuff
+import resources
 import math
 
-n, k = [int(data) for data in stuff.read_file('datasets/rosalind_fib.txt').split(' ')]
+n, k = [int(data) for data in resources.read_file('datasets/rosalind_fib.txt').split(' ')]
 
 i = 0
 children, adults = 1, 0

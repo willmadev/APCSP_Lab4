@@ -4,12 +4,12 @@
 
 ## http://rosalind.info/problems/rna/
 
-import stuff
+import resources
 
 # Enter DNA Sequence here
 file_path = 'datasets/rosalind_rna.txt'
 
-dna_seq = stuff.read_file(file_path)
+dna_seq = resources.read_file(file_path)
 
 rna_seq = ''
 
