@@ -8,6 +8,10 @@ def read_file(file_path):
     return file_data
 
 def read_fasta(file_path):
+    '''
+    Input: file path \n
+    Output: Dictionary with description as key and DNA sequence as value
+    '''
     #setup variables
     key = str()
     sequence = str()
@@ -37,6 +41,9 @@ def read_fasta(file_path):
     return(dictionary)
 
 def write_file(file_path, strList):
+    '''
+    Input: File Path, List with each item as a new line
+    '''
     with open(file_path, 'w') as f:
         for string in strList:
             f.write(string + '\n')
@@ -62,6 +69,10 @@ aaDict = {
 }
 
 def list_to_str(og_list):
+    '''
+    Input: List \n
+    Output: Rosalind List (space separated string)
+    '''
     return_str = ''
     for item in og_list:
         return_str += str(item) + ' '

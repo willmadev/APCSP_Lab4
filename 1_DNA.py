@@ -6,21 +6,27 @@
 
 import resources
 
-# Enter DNA Sequence here
-file_path = 'datasets/rosalind_dna.txt'
+def DNA(dna_seq):
+    '''
+    Input: DNA Sequence \n
+    Output: (A, G, C, T)
+    '''
+    A, G, C, T = 0, 0, 0, 0
 
-dna_seq = resources.read_file(file_path)
+    for nt in dna_seq:
+        if nt == 'A':
+            A += 1
+        elif nt == 'G':
+            G += 1
+        elif nt == 'C':
+            C += 1
+        elif nt == 'T':
+            T += 1
 
-A, G, C, T = 0, 0, 0, 0
+    return(A, G, C, T)
+    
+if __name__ == "__main__":
+    file_path = 'datasets/rosalind_dna.txt'
+    dna_seq = resources.read_file(file_path)
 
-for nt in dna_seq:
-    if nt == 'A':
-        A += 1
-    elif nt == 'G':
-        G += 1
-    elif nt == 'C':
-        C += 1
-    elif nt == 'T':
-        T += 1
-
-print(A,C,G,T)
+    print(DNA(dna_seq))

@@ -6,17 +6,22 @@
 
 import resources
 
-# Enter DNA Sequence here
-file_name = 'datasets/rosalind_revc.txt'
+def REVC(dna_seq):
+    '''
+    Input: DNA Sequence \n
+    Output: Reverse Compliment
+    '''
+    reverse = dna_seq[::-1]
 
-dna_seq = resources.read_file(file_name).strip('\n')
+    complements = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
 
-reverse = dna_seq[::-1]
+    revc = ''
+    for nt in reverse:
+        revc += complements[nt]
 
-complements = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+    return(revc)
 
-revc = ''
-for nt in reverse:
-    revc += complements[nt]
-
-print(revc)
+if __name__ == "__main__":
+    file_name = 'datasets/rosalind_revc.txt'
+    dna_seq = resources.read_file(file_name).strip('\n')
+    print(REVC(dna_seq))

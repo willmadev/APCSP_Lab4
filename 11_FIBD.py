@@ -7,30 +7,37 @@
 import resources
 import copy
 
+def FIBD(n, m):
+    '''
+    Input: n = total months, m = months each rabbit lives for \n
+    Output: total population at n months
+    '''
+    i = 0
 
-file_path = 'datasets/rosalind_fibd.txt'
-n, m = [int(x) for x in resources.read_file(file_path).strip('\n').split()]
+    rabbits = {0:1}
+    while i < n-1:
+        temp_rabbits = copy.copy(rabbits)
+        for age in temp_rabbits:
+            if age == 0:
+                rabbits[1] = temp_rabbits[0]
+                rabbits[0] = 0
+            elif age >= 1:
+                rabbits[age + 1] = temp_rabbits[age]
+                rabbits[0] += temp_rabbits[age]
+                if age + 1 == m:
+                    rabbits[m] = 0
 
-i = 0
+        i+=1
 
-rabbits = {0:1}
-while i < n-1:
-    temp_rabbits = copy.copy(rabbits)
-    for age in temp_rabbits:
-        if age == 0:
-            rabbits[1] = temp_rabbits[0]
-            rabbits[0] = 0
-        elif age >= 1:
-            rabbits[age + 1] = temp_rabbits[age]
-            rabbits[0] += temp_rabbits[age]
-            if age + 1 == m:
-                rabbits[m] = 0
+    total = 0
+    for age in rabbits:
+        if age != m:
+            total += rabbits[age]
 
-    i+=1
+    return(total)
 
-total = 0
-for age in rabbits:
-    if age != m:
-        total += rabbits[age]
-
-print(total)
+if __name__ == "__main__":
+    file_path = 'datasets/rosalind_fibd.txt'
+    n, m = [int(x) for x in resources.read_file(file_path).strip('\n').split()]
+    
+    print(FIBD(n,m))

@@ -6,17 +6,23 @@
 
 import resources
 
-# Enter DNA Sequence here
-file_path = 'datasets/rosalind_rna.txt'
+def RNA(dna_seq):
+    '''
+    Input: DNA Sequence \n
+    Output: RNA Sequence
+    '''
+    rna_seq = ''
 
-dna_seq = resources.read_file(file_path)
+    for nt in dna_seq:
+        if nt == 'T':
+            rna_seq += 'U'
+        else:
+            rna_seq += nt
 
-rna_seq = ''
+    return(rna_seq)
 
-for nt in dna_seq:
-    if nt == 'T':
-        rna_seq += 'U'
-    else:
-        rna_seq += nt
+if __name__ == "__main__":
+    file_path = 'datasets/rosalind_rna.txt'
+    dna_seq = resources.read_file(file_path)
 
-print(rna_seq)
+    print(RNA(dna_seq))

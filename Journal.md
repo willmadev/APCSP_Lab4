@@ -1,6 +1,6 @@
 # Lab 4 Journal
 
-## WEEK 1
+## Day 1
 
 ###### 12/14/2020 - 5:53pm - 7:36pm (1h 43min)
 
@@ -17,3 +17,9 @@ Problem 7 (HAMM) was relatively simple, I just used compared each index of the s
 ###### 12/16/2020 - 8:30pm - 10:30pm (2h)
 
 For problem 11 (FIBD), I originally created a rabbit class with an age property. This worked for the sample dataset, but when I downloaded the actual dataset, I ran into a problem where it would take my computer way too much time after I got past 32 months. I ended up using a dictionary to keep track of ages, which is much much faster than millions of objects. Problem 12 (GRPH) was much easier, I just compared every suffix with every prefix. Problem 13 (IEV) seemed super complicated at first, but I realized it was just addition after writing out the probabilities of each genotype. The last one I did (promise I swear this isn't an addiction) was problem 14 (LCSM), which for me was debug heavy. I had an idea of what to do, where it would go through the first sequence and compare every possible substring with all the others, but I left lots of holes to fix which was a little frustrating. Now that I think about it, I should have just put all the problems in one file instead of 14 whoops.
+
+## Day 2 - Break!!!
+
+###### 12/21/2020 - 12:00am -
+
+I started the day/night by reorganizing all my modules. I moved everything into functions so if I ever want to call them from somewhere else or copy them all into one file it'll be much easier. I also attempted problem 15 (LIA) for a while (which I started last week), but after staring at it for hours I still have no clue how to do it - I'll probably ask Ms. DeRanek for help after break.
