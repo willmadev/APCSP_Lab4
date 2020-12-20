@@ -114,7 +114,7 @@ def status_code_check(response):
 def get_uniprot(uniprot_id):
     '''
     Input: uniprot id \n
-    Output: dictionary with description as key and dna string as value
+    Output: dictionary with uniprot id as key and dna string as value
     '''
     url = 'http://www.uniprot.org/uniprot/' + uniprot_id + '.fasta'
     try:
@@ -134,7 +134,6 @@ def get_uniprot(uniprot_id):
     dictionary = dict()
 
     fasta_text = [line for line in r.text.split('\n')]
-    print(fasta_text)
     for line in fasta_text:
         #if the line starts with > save the rest of the line as the key
         if line == '':
@@ -145,7 +144,8 @@ def get_uniprot(uniprot_id):
                 dictionary[key] = sequence
                 key = str()
                 sequence = str()
-            key = line[1:].strip("\n")
+            # key = line[1:].strip("\n")
+            key = uniprot_id
         else:
             sequence = sequence + line.strip("\n")
         #add this line to the existing sequence
