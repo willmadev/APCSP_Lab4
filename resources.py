@@ -1,3 +1,9 @@
+import logging
+import requests
+
+format = "%(asctime)s: %(message)s"
+logging.basicConfig(format=format, level=logging.ERROR, datefmt="%H:%M:%S")
+
 def read_file(file_path):
     '''
     Input: file path \n
@@ -78,3 +84,75 @@ def list_to_str(og_list):
         return_str += str(item) + ' '
     
     return(return_str)
+
+def status_code_check(response):
+    '''
+    Input: response
+    Output: bool
+    '''
+    
+    if response.status_code == 200:
+        return True
+    else:
+        if response.status_code == 422:
+            logging.error("RESPONSE 422 - CHECK MESSAGE")
+            logging.error(response.text)
+        elif response.status_code == 429:
+            logging.error("RESPONSE 429 - Processing too many requests")
+            logging.error(response.text)
+        elif response.status_code == 500:
+            logging.error("RESPONSE 500 - Internal Server Error")
+            logging.error(response.text)
+        elif response.status_code == 404:
+            logging.error("RESPONSE 404")
+        else:
+            logging.error("Unexpected Error")
+            logging.error(response.status_code)
+        
+        return False
+
+def get_uniprot(uniprot_id):
+    '''
+    Input: uniprot id \n
+    Output: dictionary with description as key and dna string as value
+    '''
+    url = 'http://www.uniprot.org/uniprot/' + uniprot_id + '.fasta'
+    try:
+        # API GET request
+        r = requests.get(url)
+    except:
+        # GET request error
+        print('API GET ERROR ------------------')
+        print(r.status_code)
+    
+    # status code error
+    if not status_code_check:
+        return (Exception)
+    
+    key = str()
+    sequence = str()
+    dictionary = dict()
+
+    fasta_text = [line for line in r.text.split('\n')]
+    print(fasta_text)
+    for line in fasta_text:
+        #if the line starts with > save the rest of the line as the key
+        if line == '':
+            continue
+        if line[0] == ">":
+            #
+            if(key != ""):
+                dictionary[key] = sequence
+                key = str()
+                sequence = str()
+            key = line[1:].strip("\n")
+        else:
+            sequence = sequence + line.strip("\n")
+        #add this line to the existing sequence
+        
+
+        #if the file doesn't end with a \n
+    if key not in dictionary.keys():
+        dictionary[key] = sequence
+
+    return(dictionary)
