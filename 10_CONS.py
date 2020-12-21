@@ -6,7 +6,7 @@
 
 import resources
 
-def CONS(dna_dict, ):
+def CONS(dna_dict):
     '''
     Input: Fasta Dictionary with ID as key and DNA sequence as value \n
     Output: Writes a consensus string and profile matrix for the collection to outputs/cons.txt

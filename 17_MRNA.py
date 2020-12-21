@@ -2,7 +2,7 @@
 ## Willma
 ## 12/21/2020
 
-## http://rosalind.info/problems/mprt/
+## http://rosalind.info/problems/mrna/
 
 import resources
 
