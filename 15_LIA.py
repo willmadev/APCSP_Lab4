@@ -1,8 +1,8 @@
-## Problem 14 - LCSM (Finding a Shared Motif)
+## Problem 15 - LIA (Independent Alleles)
 ## Willma
-## 12/16/2020
+## 12/21/2020
 
-## http://rosalind.info/problems/lcsm/
+## http://rosalind.info/problems/lia/
 
 # TODO: idk how to doooo ask deranek
 import resources
