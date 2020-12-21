@@ -179,3 +179,13 @@ monoisotopic_mass_dict = {
     'W':186.07931,
     'Y':163.06333 ,
 }
+
+compliments = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+
+def fasta_to_string(fasta_dict):
+    '''
+    Input: Dictionary with only one item with description as key and DNA sequence as value \n
+    Output: description, dna sequence
+    '''
+    for key in fasta_dict:
+        return(key, fasta_dict[key])
