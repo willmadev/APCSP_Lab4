@@ -188,4 +188,4 @@ def fasta_to_string(fasta_dict):
     Output: description, dna sequence
     '''
     for key in fasta_dict:
-        return(key, fasta_dict[key])
+        return([key, fasta_dict[key]])
