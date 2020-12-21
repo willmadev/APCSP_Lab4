@@ -24,6 +24,6 @@ For problem 11 (FIBD), I originally created a rabbit class with an age property.
 
 I started the day/night by reorganizing all my modules. I moved everything into functions so if I ever want to call them from somewhere else or copy them all into one file it'll be much easier. I also attempted problem 15 (LIA) for a while (which I started last week), but after staring at it for hours I still have no clue how to do it - I'll probably ask Ms. DeRanek for help after break. Problem 16 (MPRT) made me happy because I got to use APIs. I used some code from a personal project I'm working on, specifically the `status_code_check()` which is just for debugging and a try get block to get responses. I added `get_uniprot()` to resources.py which returns a dictionary of the fasta file.
 
-###### 12/21/2020 - 12:36pm - 
+###### 12/21/2020 - 12:36pm -
 
-Problem 17 (MRNA) seemed very complicated, but then I realized I just had to mod 100000 at the end.
+Problem 17 (MRNA) seemed very complicated, but then I realized I just had to mod 100000 at the end. Then I met with my old buddy findORF again. For problem 18 (ORF), I at first tried to redo the whole thing, but I have no clue how I did it last time, and I ended up just copy pasting the code. I had to google how to do problem 19 (PERM), but after understanding the theory i coded it myself. I used a recursive function, which means it calls back itself.

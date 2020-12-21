@@ -52,7 +52,7 @@ def write_file(file_path, strList):
     '''
     with open(file_path, 'w') as f:
         for string in strList:
-            f.write(string + '\n')
+            f.write(str(string) + '\n')
 
 codonDict = {
     'AUU': 'I', 'AUC': 'I', 'AUA': 'I', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L', 'UUA': 'L', 'UUG': 'L',
