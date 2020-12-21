@@ -9,7 +9,7 @@ import copy
 
 def permutations(num_list):
     '''
-    Input: list of numbers
+    Input: list of numbers \n
     Output: Permutations of list
     '''
     #if list is empty return empty list
