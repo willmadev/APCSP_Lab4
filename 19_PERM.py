@@ -9,7 +9,7 @@ import copy
 
 def permutations(num_list):
     '''
-    Input: list of numbers \n
+    Input: list of numbers
     Output: Permutations of list
     '''
     #if list is empty return empty list
@@ -57,3 +57,4 @@ if __name__ == "__main__":
     file_path = 'datasets/rosalind_perm.txt'
     n = int(resources.read_file(file_path).strip('\n'))
     PERM(n)
+    print(permutations(['A','C','G','T']))
