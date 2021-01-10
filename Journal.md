@@ -27,3 +27,19 @@ I started the day/night by reorganizing all my modules. I moved everything into 
 ###### 12/21/2020 - 12:36pm - 5:58pm (5h 22min)
 
 Problem 17 (MRNA) seemed very complicated, but then I realized I just had to mod 100000 at the end. Then I met with my old buddy findORF again. For problem 18 (ORF), I at first tried to redo the whole thing, but I have no clue how I did it last time, and I ended up just copy pasting the code. I had to google how to do problem 19 (PERM), but after understanding the theory i coded it myself. I used a recursive function, which means it calls back itself. Problem 20 (PRTM) was pretty easy, similar to reading codons. I added a dictionary `monoisotopic_mass_dict` to resources. Problem 21 was also pretty okay, the main part is that I used many many for loops to test each letter in the palindrome. For problem 22, I started with `.find()` similar to with ORFs, but I switched to using `.split()` and then adding the list back together.
+
+###### 12/21/2020 - 6:34pm - 7:02pm (28min)
+
+Problem 23 (LEXF) was similar to PERM, and I used a helper function to do it.
+
+## Day 3
+
+###### 1/6/2021 - 7:00pm - 9:00pm (2h)
+
+Long time no see! For problem 24 (LGIS) I tried to brute force an answer, but it took too long to find the answer. I tried searching up the answer online, but after reading multiple answers about both recursive and dynamic solutions, I gave up more confused than when I started. I'll probably also have to ask Ms. Deranek about it. My code for problem 25 worked for the sample dataset, but not for the actual dataset. I stopped working shortly after this.
+
+## Day 4
+
+###### 1/10/2021 - 9:43pm - 11:20pm (1h 37min)
+
+After around 5h worth of troubleshooting, I realized that the problem was that although there could only be one unique superstring, a read could have multiple overlapping reads to it. *note: I found that this was not the case after whoops. Now I have no clue how to do this again.* At this point, for debugging purposes I created a dictionary that had the head as the key and the tail as the value, and there was no key with multiple tails (only one with no tails). I used this dictionary to combine it into a superstring. This solution ended up working.
