@@ -6,27 +6,28 @@
 
 # TODO: idk how to doooo ask deranek
 import resources
+import numpy as np
+from scipy.stats import binom
+import math
 
-def LIA(k,n):
-     #AABB = 1/16
-     #AABb = 2/16
-     #AaBB = 2/16
-     #AaBb = 4/16
-     #AAbb = 1/16
-     #Aabb = 2/16
-     #aaBB = 1/16
-     #aaBb = 2/16
-     #aabb = 1/16
+# works cited
+# https://en.wikipedia.org/wiki/Combination
+# 
 
-     #AA = 1/4
-     #Aa = 2/4
-     #aa = 1/4
+def ncr(n, r):
+    return math.factorial(n) // (math.factorial(r) * math.factorial(n-r))
 
-     generation = 0
-     while generation < k:
-          # Pr(AA) * Pr(Aa)
-     generation += 1
+
+def LIA(k,N):
+     p = 1/4        # probability of success on a single trial
+     n = 2 ** k     # number of trials
+     prob = []      # summation solutions
+     for x in range(N, n):
+          prob.append(binom.cdf(ncr(2**k, x), n, p))
+
+     return sum(prob)
 
 if __name__ == "__main__":
-     file_path = 'datasets/rosalind_lia.txt'
-     k, n = [data for data in resources.read_file(file_path).strip('\n').split()]
+     # file_path = 'datasets/rosalind_lia.txt'
+     # k, n = [data for data in resources.read_file(file_path).strip('\n').split()]
+     print(LIA(2, 1))

@@ -182,6 +182,8 @@ monoisotopic_mass_dict = {
 
 compliments = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
 
+rna_compliments = {'A':'U', 'U':'A', 'C':'G', 'G':'C'}
+
 def fasta_to_string(fasta_dict):
     '''
     Input: Dictionary with only one item with description as key and DNA sequence as value \n

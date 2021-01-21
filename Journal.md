@@ -36,10 +36,20 @@ Problem 23 (LEXF) was similar to PERM, and I used a helper function to do it.
 
 ###### 1/6/2021 - 7:00pm - 9:00pm (2h)
 
-Long time no see! For problem 24 (LGIS) I tried to brute force an answer, but it took too long to find the answer. I tried searching up the answer online, but after reading multiple answers about both recursive and dynamic solutions, I gave up more confused than when I started. I'll probably also have to ask Ms. Deranek about it. My code for problem 25 worked for the sample dataset, but not for the actual dataset. I stopped working shortly after this.
+Long time no see! For problem 24 (LGIS) I tried to brute force an answer, but it took too long to find the answer. I tried searching up the answer online, but after reading multiple answers about both recursive and dynamic solutions, I gave up more confused than when I started. I'll probably also have to ask Ms. Deranek about it. My code for problem 25 (LONG) worked for the sample dataset, but not for the actual dataset. I stopped working shortly after this.
 
 ## Day 4
 
 ###### 1/10/2021 - 9:43pm - 11:20pm (1h 37min)
 
 After around 5h worth of troubleshooting, I realized that the problem was that although there could only be one unique superstring, a read could have multiple overlapping reads to it. *note: I found that this was not the case after whoops. Now I have no clue how to do this again.* At this point, for debugging purposes I created a dictionary that had the head as the key and the tail as the value, and there was no key with multiple tails (only one with no tails). I used this dictionary to combine it into a superstring. This solution ended up working.
+
+###### 1/11/2021 - 5:16pm - 7:05pm (1h 51min)
+
+I started working on problem 26 (PMCH), which looked very complicated. I read through the prompt many times without understanding. Eventually, I started by writing a class for the nodes, and then creating a list of all adjacency edges and basepair edges. I didn't know where to go after that and stopped for the night. lie i kept searching things up and reading solutions, and most solutions use a factorial of the number of As and Cs, which I don't really understand. I guess that's another question I'll jam into the 15min office hours I have with her this friday :)
+
+## idk what day it is anymore
+
+###### 1/21/2021 - 5:07pm - 6:40pm (1h 33min)
+
+I FINISHED LGIS!!! I spent more time on it last week, but I forgot to record it and I didn't finish anything to commit. I used dynamic programming, and this problem took all my brain power. I also discovered and fell in love with the VSC debug tool, the ability to set break points is just *chefs kiss. I might do more today depending on my mood.
